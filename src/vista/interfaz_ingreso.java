@@ -6,10 +6,12 @@
 package vista;
 
 import helpers.Validaciones;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import modelo.Apoderado;
 import modelo.Familiar;
+import modelo.JRollback;
 import modelo.Usuario;
 
 /**
@@ -1372,7 +1374,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
             String certificado_estudio = "N";
             String necesita_pae = "N";
             String pertenece_programa_puente = "N";
-            
+
             if (check_certificado_nacimiento.isSelected()) {
                 certificado_nacimiento = "S";
             }
@@ -1391,25 +1393,25 @@ public class interfaz_ingreso extends javax.swing.JFrame {
             // Envio a Validacion con retorno de 2 campos
             // arreglo[0] = S/N
             // arreglo[1] = "Mensaje";
-            String[] arreglo = validacion.validarUsuario(nombres, apellido_pat, apellido_mat, rut,dv, fecha_nacimiento, direccion, telefono, curso, fecha_matricula, poblacion, comuna, establecimiento, tipo_establecimiento, repite_curso, cual, especialidad, sector_vive, viaja, donde_vive, otros, ascendencia, certificado_nacimiento, certificado_programa_puente, certificado_estudio, necesita_pae, pertenece_programa_puente);
-            if(arreglo[0].equals("S")){
+            String[] arreglo = validacion.validarUsuario(nombres, apellido_pat, apellido_mat, rut, dv, fecha_nacimiento, direccion, telefono, curso, fecha_matricula, poblacion, comuna, establecimiento, tipo_establecimiento, repite_curso, cual, especialidad, sector_vive, viaja, donde_vive, otros, ascendencia, certificado_nacimiento, certificado_programa_puente, certificado_estudio, necesita_pae, pertenece_programa_puente);
+            if (arreglo[0].equals("S")) {
                 panel_principal.setSelectedIndex(1);
-            }else{
-                JOptionPane.showMessageDialog(null,arreglo[1]);
+            } else {
+                JOptionPane.showMessageDialog(null, arreglo[1]);
             }
-            
+
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null,e);
+            JOptionPane.showMessageDialog(null, e);
         }
 
     }//GEN-LAST:event_btn_siguiente_alumnoActionPerformed
 
     private void btn_siguiente_familiaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_siguiente_familiaresActionPerformed
-        try{
+        try {
             Validaciones validacion = new Validaciones();
-             // Recepcion de Datos de Padre y Madre
-            int rut_padre=Integer.parseInt(txt_rut_padre.getText());
-            String dv_padre=txt_dv_padre.getText();
+            // Recepcion de Datos de Padre y Madre
+            int rut_padre = Integer.parseInt(txt_rut_padre.getText());
+            String dv_padre = txt_dv_padre.getText();
             String nombre_padre = txt_nombre_completo_padre.getText();
             int nivel_educacional_padre = cbo_nivel_educacional_padre_familiar.getSelectedIndex();
             String ingreso_padre = txt_ingreso_padre.getText();
@@ -1418,8 +1420,8 @@ public class interfaz_ingreso extends javax.swing.JFrame {
             String telefono_padre = txt_telefono_padre.getText();
             String domicilio_padre = txt_domicilio_padre.getText();
             // Datos Madre
-            int rut_madre=Integer.parseInt(txt_rut_madre.getText());
-            String dv_madre=txt_dv_madre.getText();
+            int rut_madre = Integer.parseInt(txt_rut_madre.getText());
+            String dv_madre = txt_dv_madre.getText();
             String nombre_madre = txt_nombre_completo_madre.getText();
             int nivel_educacional_madre = cbo_nivel_educacional_madre_familiar.getSelectedIndex();
             String ingreso_madre = txt_ingreso_madre.getText();
@@ -1446,17 +1448,17 @@ public class interfaz_ingreso extends javax.swing.JFrame {
             int religion = cbo_religion_familiar.getSelectedIndex();
             int rut_jefe_hogar = Integer.parseInt(txt_rut_jefe_hogar.getText());
             String dv_rut_jefe_hogar = txt_rut_jefe_hogar.getText();
-            String[] arreglo = validacion.validarFamiliar(dv_padre,nombre_padre,ingreso_padre,ocupacion_padre,telefono_padre,
-                    domicilio_padre,dv_madre,nombre_madre,ingreso_madre,ocupacion_madre,telefono_madre,domicilio_madre,hermanos_estudiando,dv_rut_jefe_hogar,
-                    rut_padre,nivel_educacional_padre,rut_madre,nivel_educacional_madre,integrantes,abuelos,n_hermanos,tios,educacion_basica,educacion_media,educacion_universitaria,
-                    relacion_jefe_hogar,prevision,salud,religion,rut_jefe_hogar);
-            if(arreglo[0].equals("S")){
+            String[] arreglo = validacion.validarFamiliar(dv_padre, nombre_padre, ingreso_padre, ocupacion_padre, telefono_padre,
+                    domicilio_padre, dv_madre, nombre_madre, ingreso_madre, ocupacion_madre, telefono_madre, domicilio_madre, hermanos_estudiando, dv_rut_jefe_hogar,
+                    rut_padre, nivel_educacional_padre, rut_madre, nivel_educacional_madre, integrantes, abuelos, n_hermanos, tios, educacion_basica, educacion_media, educacion_universitaria,
+                    relacion_jefe_hogar, prevision, salud, religion, rut_jefe_hogar);
+            if (arreglo[0].equals("S")) {
                 panel_principal.setSelectedIndex(2);
-            }else{
-                JOptionPane.showMessageDialog(null,arreglo[1]);
+            } else {
+                JOptionPane.showMessageDialog(null, arreglo[1]);
             }
-        }catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(null,e);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_btn_siguiente_familiaresActionPerformed
 
@@ -1478,36 +1480,145 @@ public class interfaz_ingreso extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_volver_familiarActionPerformed
 
     private void btn_siguiente_familiares1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_siguiente_familiares1ActionPerformed
-        try{
+        try {
             Validaciones validacion = new Validaciones();
-             // Recepcion de Datos de Apoderado
-            int rut_apoderado =Integer.parseInt(txt_rut_apoderado.getText());
-            String dv_apoderado=txt_dv_apoderado.getText();
+            // Recepcion de Datos de Apoderado
+            int rut_apoderado = Integer.parseInt(txt_rut_apoderado.getText());
+            String dv_apoderado = txt_dv_apoderado.getText();
             String nombres_apoderado = txt_nombres_apoderado.getText();
             String apellido_mat_apoderado = txt_apellido_mat_apoderado.getText();
             String apellido_pat_apoderado = txt_apellido_pat_apoderado.getText();
             String telefono_apoderado = txt_telefono_apoderado.getText();
             int vinculo_alumno_apoderado = cbo_vinculo_alumno_apoderado.getSelectedIndex();
             int tipo_apoderado = cbo_tipo_apoderado.getSelectedIndex();
-            String[] arreglo = validacion.validarApoderado(dv_apoderado,nombres_apoderado,apellido_mat_apoderado,apellido_pat_apoderado,telefono_apoderado,
-                    rut_apoderado,vinculo_alumno_apoderado,tipo_apoderado);
-            if(arreglo[0].equals("S")){
-                JOptionPane.showMessageDialog(null, "COMPLETAMOS LA VALIDACION DE TODOS LOS CAMPOS");
+            String[] arreglo = validacion.validarApoderado(dv_apoderado, nombres_apoderado, apellido_mat_apoderado, apellido_pat_apoderado, telefono_apoderado,
+                    rut_apoderado, vinculo_alumno_apoderado, tipo_apoderado);
+            if (arreglo[0].equals("S")) {
+                // Declaracion de Variables
+                // Recepcion de Datos para el Alumno
+                String nombres = txt_nombres_alumno.getText();
+                String apellido_pat = txt_apellido_pat_alumno.getText();
+                String apellido_mat = txt_apellido_mat_alumno.getText();
+                int rut = Integer.parseInt(txt_rut.getText());
+                String dv = txt_dv.getText();
+                Date fecha_nacimiento = date_fecha_nacimiento.getDate();
+                String direccion = txt_direccion.getText();
+                String telefono = txt_telefono.getText();
+                int curso = cbo_curso.getSelectedIndex();
+                Date fecha_matricula = date_fecha_matricula.getDate();
+                String poblacion = txt_poblacion.getText();
+                int comuna = cbo_comuna.getSelectedIndex();
+                int establecimiento = cbo_establecimiento.getSelectedIndex();
+                int tipo_establecimiento = cbo_tipo_establecimiento.getSelectedIndex();
+                String repite_curso = "N";
+                String cual = "";
+                if (check_repite_curso.isSelected()) {
+                    repite_curso = "S";
+                    cual = txt_cual.getText();
+                }
+                int especialidad = cbo_especialidad.getSelectedIndex();
+                int sector_vive = cbo_lugar_vive.getSelectedIndex();
+                int viaja = cbo_periodo_viaje.getSelectedIndex();
+                String donde_vive = txt_donde_vive.getText();
+                String otros = txt_otros.getText();
+                int ascendencia = cbo_ascendencia.getSelectedIndex();
+                String certificado_nacimiento = "N";
+                String certificado_programa_puente = "N";
+                String certificado_estudio = "N";
+                String necesita_pae = "N";
+                String pertenece_programa_puente = "N";
+
+                if (check_certificado_nacimiento.isSelected()) {
+                    certificado_nacimiento = "S";
+                }
+                if (check_programa_puente.isSelected()) {
+                    certificado_programa_puente = "S";
+                }
+                if (check_certificado_estudio.isSelected()) {
+                    certificado_estudio = "S";
+                }
+                if (check_pae.isSelected()) {
+                    necesita_pae = "S";
+                }
+                if (check_pertenece_programa_puente.isSelected()) {
+                    pertenece_programa_puente = "S";
+                }
+                //Datos Familiares
+                int rut_padre = Integer.parseInt(txt_rut_padre.getText());
+                String dv_padre = txt_dv_padre.getText();
+                String nombre_padre = txt_nombre_completo_padre.getText();
+                int nivel_educacional_padre = cbo_nivel_educacional_padre_familiar.getSelectedIndex();
+                String ingreso_padre = txt_ingreso_padre.getText();
+                Date fecha_nacimiento_padre = date_fecha_nacimiento_padre.getDate();
+                String ocupacion_padre = txt_ocupacion_profesion_padre.getText();
+                String telefono_padre = txt_telefono_padre.getText();
+                String domicilio_padre = txt_domicilio_padre.getText();
+                // Datos Madre
+                int rut_madre = Integer.parseInt(txt_rut_madre.getText());
+                String dv_madre = txt_dv_madre.getText();
+                String nombre_madre = txt_nombre_completo_madre.getText();
+                int nivel_educacional_madre = cbo_nivel_educacional_madre_familiar.getSelectedIndex();
+                String ingreso_madre = txt_ingreso_madre.getText();
+                Date fecha_nacimiento_madre = date_fecha_nacimiento_madre.getDate();
+                String ocupacion_madre = txt_ocupacion_profesion_madre.getText();
+                String telefono_madre = txt_telefono_madre.getText();
+                String domicilio_madre = txt_domicilio_madre.getText();
+                //Recepcion de Datos Familia Principalmente Cantidades
+                int integrantes = Integer.parseInt(txt_integrantes_familia.getText());
+                int abuelos = Integer.parseInt(txt_abuelos.getText());
+                int n_hermanos = Integer.parseInt(txt_numero_hermanos.getText());
+                int tios = Integer.parseInt(txt_tios.getText());
+                String hermanos_estudiando = "N";
+                if (check_hermanos_estudiando.isSelected()) {
+                    hermanos_estudiando = "S";
+                }
+                int educacion_basica = Integer.parseInt(txt_educacion_basica.getText());
+                int educacion_media = Integer.parseInt(txt_educacion_media.getText());
+                int educacion_universitaria = Integer.parseInt(txt_educacion_universitaria.getText());
+                //Recepcion Datos Jefe de Hogar
+                int relacion_jefe_hogar = cbo_jefe_hogar.getSelectedIndex();
+                int prevision = cbo_prevision.getSelectedIndex();
+                int salud = cbo_salud_familiar.getSelectedIndex();
+                int religion = cbo_religion_familiar.getSelectedIndex();
+                int rut_jefe_hogar = Integer.parseInt(txt_rut_jefe_hogar.getText());
+                String dv_rut_jefe_hogar = txt_rut_jefe_hogar.getText();
+                // Declaración de un ArrayList para guardar todos los campos para Transaccion
+                ArrayList<String> arrayString = new ArrayList<>();
+                ArrayList<Integer> arrayInt = new ArrayList<>();
+                ArrayList<Date> arrayDate = new ArrayList<>();
+                /**
+                 * Datos String para Alumno (16)
+                 */
+                arrayString.add(nombres);arrayString.add(apellido_mat);arrayString.add(apellido_pat);arrayString.add(dv);arrayString.add(direccion);
+                arrayString.add(telefono);arrayString.add(poblacion);arrayString.add(telefono);arrayString.add(repite_curso);arrayString.add(cual);
+                arrayString.add(donde_vive);arrayString.add(otros);arrayString.add(certificado_nacimiento);arrayString.add(certificado_programa_puente);arrayString.add(certificado_estudio);
+                arrayString.add(necesita_pae);arrayString.add(pertenece_programa_puente);
+                /**
+                 * Datos String para Familiares (14)
+                 */
+                arrayString.add(dv_padre);arrayString.add(nombre_padre);arrayString.add(ingreso_padre);arrayString.add(ocupacion_padre);arrayString.add(telefono_padre);
+                arrayString.add(domicilio_padre);arrayString.add(dv_madre);arrayString.add(nombre_madre);arrayString.add(ingreso_madre);arrayString.add(ocupacion_madre);
+                arrayString.add(telefono_madre);arrayString.add(domicilio_madre);arrayString.add(hermanos_estudiando);arrayString.add(dv_rut_jefe_hogar);
+                /**
+                 * Datos String para Apoderado(5)
+                 */
+                arrayString.add(dv_apoderado);arrayString.add(nombres_apoderado);arrayString.add(apellido_mat_apoderado);arrayString.add(apellido_pat_apoderado);arrayString.add(telefono_apoderado);
+                /**
+                 * Datos int para Alumno (9)
+                 */
+                arrayInt.add(rut);arrayInt.add(curso);arrayInt.add(comuna);arrayInt.add(establecimiento);arrayInt.add(tipo_establecimiento);arrayInt.add(especialidad);
+                arrayInt.add(sector_vive);arrayInt.add(viaja);arrayInt.add(ascendencia);
                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            }else{
-                JOptionPane.showMessageDialog(null,arreglo[1]);
+                JRollback rollback  = new JRollback();
+                rollback.tr_ingresar_campos(arrayString,arrayInt,arrayDate);
+                // Añade el elemento al ArrayList
+                //nombreArrayList.add("Elemento");
+
+            } else {
+                JOptionPane.showMessageDialog(null, arreglo[1]);
             }
-        }catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(null,e);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_btn_siguiente_familiares1ActionPerformed
     private void llenarCbo() {
