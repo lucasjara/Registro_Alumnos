@@ -50,6 +50,9 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JTabbedPane" name="panel_principal">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
@@ -857,15 +860,15 @@
                           <Group type="102" attributes="0">
                               <Component id="lbl_nombre23" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_rut4" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="txt_rut_padre" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre24" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_dv1" min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="txt_dv_padre" min="-2" pref="21" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre22" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre3" min="-2" pref="219" max="-2" attributes="0"/>
+                              <Component id="txt_nombre_completo_padre" min="-2" pref="219" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre25" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -873,38 +876,38 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre30" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre7" max="32767" attributes="0"/>
+                              <Component id="txt_ingreso_padre" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="lbl_nombre26" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_fecha_nacimiento1" min="-2" pref="141" max="-2" attributes="0"/>
+                              <Component id="date_fecha_nacimiento_padre" min="-2" pref="141" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                               <Component id="lbl_nombre27" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre4" min="-2" pref="136" max="-2" attributes="0"/>
+                              <Component id="txt_ocupacion_profesion_padre" min="-2" pref="136" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre28" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre5" min="-2" pref="136" max="-2" attributes="0"/>
+                              <Component id="txt_telefono_padre" min="-2" pref="136" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre29" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre6" max="32767" attributes="0"/>
+                              <Component id="txt_domicilio_padre" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jSeparator4" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="lbl_nombre31" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_rut6" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="txt_rut_madre" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre32" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_dv2" min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="txt_dv_madre" min="-2" pref="21" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre39" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre8" min="-2" pref="221" max="-2" attributes="0"/>
+                              <Component id="txt_nombre_completo_madre" min="-2" pref="221" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre33" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -912,24 +915,24 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre34" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre9" max="32767" attributes="0"/>
+                              <Component id="txt_ingreso_madre" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="lbl_nombre38" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_fecha_nacimiento2" min="-2" pref="141" max="-2" attributes="0"/>
+                              <Component id="date_fecha_nacimiento_madre" min="-2" pref="141" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                               <Component id="lbl_nombre37" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                              <Component id="txt_nombre12" min="-2" pref="136" max="-2" attributes="0"/>
+                              <Component id="txt_ocupacion_profesion_madre" min="-2" pref="136" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                               <Component id="lbl_nombre36" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre11" min="-2" pref="136" max="-2" attributes="0"/>
+                              <Component id="txt_telefono_madre" min="-2" pref="136" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre35" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_nombre10" max="32767" attributes="0"/>
+                              <Component id="txt_domicilio_madre" max="32767" attributes="0"/>
                           </Group>
                           <Component id="jSeparator3" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
@@ -940,12 +943,12 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="lbl_nombre40" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_rut7" min="-2" pref="103" max="-2" attributes="0"/>
+                                      <Component id="txt_integrantes_familia" min="-2" pref="103" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="lbl_nombre41" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_rut8" max="32767" attributes="0"/>
+                                      <Component id="txt_abuelos" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -953,31 +956,31 @@
                                   <Group type="102" attributes="0">
                                       <Component id="lbl_nombre42" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_rut9" max="32767" attributes="0"/>
+                                      <Component id="txt_tios" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="lbl_nombre43" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_rut10" min="-2" pref="56" max="-2" attributes="0"/>
+                                      <Component id="txt_numero_hermanos" min="-2" pref="56" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jCheckBox7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="check_hermanos_estudiando" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="lbl_nombre45" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                      <Component id="txt_rut12" max="32767" attributes="0"/>
+                                      <Component id="txt_educacion_basica" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Component id="lbl_nombre44" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_rut11" min="-2" pref="176" max="-2" attributes="0"/>
+                                      <Component id="txt_educacion_media" min="-2" pref="176" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="lbl_nombre46" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_rut13" min="-2" pref="176" max="-2" attributes="0"/>
+                                      <Component id="txt_educacion_universitaria" min="-2" pref="176" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1010,11 +1013,11 @@
                           <Group type="102" attributes="0">
                               <Component id="lbl_nombre49" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_rut15" min="-2" pref="144" max="-2" attributes="0"/>
+                              <Component id="txt_rut_jefe_hogar" min="-2" pref="144" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lbl_nombre53" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txt_dv3" min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="txt_dv_jefe_hogar" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1045,35 +1048,40 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lbl_nombre22" alignment="3" max="32767" attributes="0"/>
-                                  <Component id="lbl_nombre23" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="txt_rut4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lbl_nombre24" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="txt_dv1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="lbl_nombre22" alignment="3" max="32767" attributes="0"/>
+                                      <Component id="lbl_nombre23" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="txt_rut_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_nombre24" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="txt_dv_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="lbl_nombre25" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="cbo_nivel_educacional_padre_familiar" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_nombre30" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="txt_ingreso_padre" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="txt_nombre3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_nombre25" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="cbo_nivel_educacional_padre_familiar" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lbl_nombre30" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txt_nombre7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="txt_nombre_completo_padre" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txt_fecha_nacimiento1" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Component id="date_fecha_nacimiento_padre" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
                           <Component id="lbl_nombre27" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_nombre26" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="txt_nombre4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_ocupacion_profesion_padre" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_nombre28" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txt_nombre5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_telefono_padre" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_nombre29" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txt_nombre6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_domicilio_padre" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1085,34 +1093,34 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="lbl_nombre31" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="txt_rut6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_rut_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="lbl_nombre32" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="txt_dv2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txt_dv_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                              <Component id="txt_nombre8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_nombre_completo_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_nombre33" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                               <Component id="cbo_nivel_educacional_madre_familiar" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_nombre34" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txt_nombre9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_ingreso_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_nombre39" alignment="3" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                              <Component id="txt_fecha_nacimiento2" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
+                              <Component id="date_fecha_nacimiento_madre" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
                               <Component id="lbl_nombre38" min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                               <Component id="lbl_nombre37" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txt_nombre12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_ocupacion_profesion_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_nombre36" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txt_nombre11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_telefono_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_nombre35" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="txt_nombre10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_domicilio_madre" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -1122,23 +1130,23 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lbl_nombre40" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_rut7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_integrantes_familia" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_nombre43" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_rut10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_numero_hermanos" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_nombre45" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_rut12" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jCheckBox7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_educacion_basica" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="check_hermanos_estudiando" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lbl_nombre41" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_rut8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_abuelos" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_nombre42" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_rut9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_tios" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_nombre44" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_rut11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_educacion_media" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_nombre46" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_rut13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_educacion_universitaria" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                       <Component id="jSeparator6" min="-2" pref="4" max="-2" attributes="0"/>
@@ -1151,9 +1159,9 @@
                           <Component id="lbl_nombre51" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="cbo_religion_familiar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_nombre49" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_rut15" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_rut_jefe_hogar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl_nombre53" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="txt_dv3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_dv_jefe_hogar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1229,12 +1237,11 @@
                 <Property name="text" type="java.lang.String" value="NOMBRE COMPLETO:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre3">
+            <Component class="javax.swing.JTextField" name="txt_nombre_completo_padre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre23">
@@ -1245,11 +1252,12 @@
                 <Property name="text" type="java.lang.String" value="RUT:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut4">
+            <Component class="javax.swing.JTextField" name="txt_rut_padre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="19196238"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre24">
@@ -1260,12 +1268,16 @@
                 <Property name="text" type="java.lang.String" value="-"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_dv1">
+            <Component class="javax.swing.JTextField" name="txt_dv_padre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="9"/>
               </Properties>
+              <Events>
+                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_dv_padreFocusLost"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre25">
               <Properties>
@@ -1294,10 +1306,7 @@
                 <Property name="text" type="java.lang.String" value="FECHA NACIMIENTO:"/>
               </Properties>
             </Component>
-            <Component class="com.toedter.calendar.JDateChooser" name="txt_fecha_nacimiento1">
-              <Properties>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
+            <Component class="com.toedter.calendar.JDateChooser" name="date_fecha_nacimiento_padre">
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre27">
               <Properties>
@@ -1307,12 +1316,11 @@
                 <Property name="text" type="java.lang.String" value="OCUPACION / PROFESION:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre4">
+            <Component class="javax.swing.JTextField" name="txt_ocupacion_profesion_padre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre28">
@@ -1323,12 +1331,11 @@
                 <Property name="text" type="java.lang.String" value="TELEFONO:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre5">
+            <Component class="javax.swing.JTextField" name="txt_telefono_padre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre29">
@@ -1339,12 +1346,11 @@
                 <Property name="text" type="java.lang.String" value="DOMICILIO:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre6">
+            <Component class="javax.swing.JTextField" name="txt_domicilio_padre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre30">
@@ -1355,12 +1361,11 @@
                 <Property name="text" type="java.lang.String" value="INGRESO:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre7">
+            <Component class="javax.swing.JTextField" name="txt_ingreso_padre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
@@ -1379,18 +1384,20 @@
                 <Property name="text" type="java.lang.String" value="RUT:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut6">
+            <Component class="javax.swing.JTextField" name="txt_rut_madre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="19196238"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_dv2">
+            <Component class="javax.swing.JTextField" name="txt_dv_madre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="9"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre32">
@@ -1401,12 +1408,11 @@
                 <Property name="text" type="java.lang.String" value="-"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre8">
+            <Component class="javax.swing.JTextField" name="txt_nombre_completo_madre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre33">
@@ -1436,20 +1442,18 @@
                 <Property name="text" type="java.lang.String" value="INGRESO:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre9">
+            <Component class="javax.swing.JTextField" name="txt_ingreso_madre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre10">
+            <Component class="javax.swing.JTextField" name="txt_domicilio_madre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre35">
@@ -1460,12 +1464,11 @@
                 <Property name="text" type="java.lang.String" value="DOMICILIO:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre11">
+            <Component class="javax.swing.JTextField" name="txt_telefono_madre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre36">
@@ -1476,12 +1479,11 @@
                 <Property name="text" type="java.lang.String" value="TELEFONO:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_nombre12">
+            <Component class="javax.swing.JTextField" name="txt_ocupacion_profesion_madre">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre37">
@@ -1492,10 +1494,7 @@
                 <Property name="text" type="java.lang.String" value="OCUPACION / PROFESION:"/>
               </Properties>
             </Component>
-            <Component class="com.toedter.calendar.JDateChooser" name="txt_fecha_nacimiento2">
-              <Properties>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
+            <Component class="com.toedter.calendar.JDateChooser" name="date_fecha_nacimiento_madre">
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre38">
               <Properties>
@@ -1535,11 +1534,12 @@
                 <Property name="text" type="java.lang.String" value="INTEGRANTES:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut7">
+            <Component class="javax.swing.JTextField" name="txt_integrantes_familia">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre41">
@@ -1550,11 +1550,12 @@
                 <Property name="text" type="java.lang.String" value="ABUELOS:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut8">
+            <Component class="javax.swing.JTextField" name="txt_abuelos">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre42">
@@ -1565,11 +1566,12 @@
                 <Property name="text" type="java.lang.String" value="TIOS:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut9">
+            <Component class="javax.swing.JTextField" name="txt_tios">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre43">
@@ -1580,14 +1582,15 @@
                 <Property name="text" type="java.lang.String" value="N* HERMANOS:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut10">
+            <Component class="javax.swing.JTextField" name="txt_numero_hermanos">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="jCheckBox7">
+            <Component class="javax.swing.JCheckBox" name="check_hermanos_estudiando">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Dialog" size="14" style="1"/>
@@ -1603,18 +1606,20 @@
                 <Property name="text" type="java.lang.String" value="EDUCACION MEDIA:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut11">
+            <Component class="javax.swing.JTextField" name="txt_educacion_media">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut12">
+            <Component class="javax.swing.JTextField" name="txt_educacion_basica">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre45">
@@ -1625,11 +1630,12 @@
                 <Property name="text" type="java.lang.String" value="EDUCACION BASICA:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut13">
+            <Component class="javax.swing.JTextField" name="txt_educacion_universitaria">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre46">
@@ -1734,7 +1740,7 @@
                 <Property name="text" type="java.lang.String" value="RUT JEFE HOGAR:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_rut15">
+            <Component class="javax.swing.JTextField" name="txt_rut_jefe_hogar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
@@ -1749,7 +1755,7 @@
                 <Property name="text" type="java.lang.String" value="-"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_dv3">
+            <Component class="javax.swing.JTextField" name="txt_dv_jefe_hogar">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>

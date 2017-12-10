@@ -104,40 +104,40 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         txt_nombre_completo_alumno_uno = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         lbl_nombre22 = new javax.swing.JLabel();
-        txt_nombre3 = new javax.swing.JTextField();
+        txt_nombre_completo_padre = new javax.swing.JTextField();
         lbl_nombre23 = new javax.swing.JLabel();
-        txt_rut4 = new javax.swing.JTextField();
+        txt_rut_padre = new javax.swing.JTextField();
         lbl_nombre24 = new javax.swing.JLabel();
-        txt_dv1 = new javax.swing.JTextField();
+        txt_dv_padre = new javax.swing.JTextField();
         lbl_nombre25 = new javax.swing.JLabel();
         cbo_nivel_educacional_padre_familiar = new javax.swing.JComboBox<>();
         lbl_nombre26 = new javax.swing.JLabel();
-        txt_fecha_nacimiento1 = new com.toedter.calendar.JDateChooser();
+        date_fecha_nacimiento_padre = new com.toedter.calendar.JDateChooser();
         lbl_nombre27 = new javax.swing.JLabel();
-        txt_nombre4 = new javax.swing.JTextField();
+        txt_ocupacion_profesion_padre = new javax.swing.JTextField();
         lbl_nombre28 = new javax.swing.JLabel();
-        txt_nombre5 = new javax.swing.JTextField();
+        txt_telefono_padre = new javax.swing.JTextField();
         lbl_nombre29 = new javax.swing.JLabel();
-        txt_nombre6 = new javax.swing.JTextField();
+        txt_domicilio_padre = new javax.swing.JTextField();
         lbl_nombre30 = new javax.swing.JLabel();
-        txt_nombre7 = new javax.swing.JTextField();
+        txt_ingreso_padre = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         lbl_nombre31 = new javax.swing.JLabel();
-        txt_rut6 = new javax.swing.JTextField();
-        txt_dv2 = new javax.swing.JTextField();
+        txt_rut_madre = new javax.swing.JTextField();
+        txt_dv_madre = new javax.swing.JTextField();
         lbl_nombre32 = new javax.swing.JLabel();
-        txt_nombre8 = new javax.swing.JTextField();
+        txt_nombre_completo_madre = new javax.swing.JTextField();
         lbl_nombre33 = new javax.swing.JLabel();
         cbo_nivel_educacional_madre_familiar = new javax.swing.JComboBox<>();
         lbl_nombre34 = new javax.swing.JLabel();
-        txt_nombre9 = new javax.swing.JTextField();
-        txt_nombre10 = new javax.swing.JTextField();
+        txt_ingreso_madre = new javax.swing.JTextField();
+        txt_domicilio_madre = new javax.swing.JTextField();
         lbl_nombre35 = new javax.swing.JLabel();
-        txt_nombre11 = new javax.swing.JTextField();
+        txt_telefono_madre = new javax.swing.JTextField();
         lbl_nombre36 = new javax.swing.JLabel();
-        txt_nombre12 = new javax.swing.JTextField();
+        txt_ocupacion_profesion_madre = new javax.swing.JTextField();
         lbl_nombre37 = new javax.swing.JLabel();
-        txt_fecha_nacimiento2 = new com.toedter.calendar.JDateChooser();
+        date_fecha_nacimiento_madre = new com.toedter.calendar.JDateChooser();
         lbl_nombre38 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
@@ -145,19 +145,19 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre39 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         lbl_nombre40 = new javax.swing.JLabel();
-        txt_rut7 = new javax.swing.JTextField();
+        txt_integrantes_familia = new javax.swing.JTextField();
         lbl_nombre41 = new javax.swing.JLabel();
-        txt_rut8 = new javax.swing.JTextField();
+        txt_abuelos = new javax.swing.JTextField();
         lbl_nombre42 = new javax.swing.JLabel();
-        txt_rut9 = new javax.swing.JTextField();
+        txt_tios = new javax.swing.JTextField();
         lbl_nombre43 = new javax.swing.JLabel();
-        txt_rut10 = new javax.swing.JTextField();
-        jCheckBox7 = new javax.swing.JCheckBox();
+        txt_numero_hermanos = new javax.swing.JTextField();
+        check_hermanos_estudiando = new javax.swing.JCheckBox();
         lbl_nombre44 = new javax.swing.JLabel();
-        txt_rut11 = new javax.swing.JTextField();
-        txt_rut12 = new javax.swing.JTextField();
+        txt_educacion_media = new javax.swing.JTextField();
+        txt_educacion_basica = new javax.swing.JTextField();
         lbl_nombre45 = new javax.swing.JLabel();
-        txt_rut13 = new javax.swing.JTextField();
+        txt_educacion_universitaria = new javax.swing.JTextField();
         lbl_nombre46 = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
@@ -170,9 +170,9 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre51 = new javax.swing.JLabel();
         cbo_religion_familiar = new javax.swing.JComboBox<>();
         lbl_nombre49 = new javax.swing.JLabel();
-        txt_rut15 = new javax.swing.JTextField();
+        txt_rut_jefe_hogar = new javax.swing.JTextField();
         lbl_nombre53 = new javax.swing.JLabel();
-        txt_dv3 = new javax.swing.JTextField();
+        txt_dv_jefe_hogar = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         btn_siguiente_familiares1 = new javax.swing.JButton();
         btn_volver_apoderado = new javax.swing.JButton();
@@ -206,6 +206,8 @@ public class interfaz_ingreso extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("INGRESOS");
+
+        panel_principal.setEnabled(false);
 
         lbl_nombre.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre.setText("* NOMBRES:");
@@ -626,18 +628,24 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre22.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre22.setText("NOMBRE COMPLETO:");
 
-        txt_nombre3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre3.setEnabled(false);
+        txt_nombre_completo_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre23.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre23.setText("RUT:");
 
-        txt_rut4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_rut_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_rut_padre.setText("19196238");
 
         lbl_nombre24.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_nombre24.setText("-");
 
-        txt_dv1.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_dv_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_dv_padre.setText("9");
+        txt_dv_padre.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dv_padreFocusLost(evt);
+            }
+        });
 
         lbl_nombre25.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre25.setText("NIVEL EDUCACIONAL:");
@@ -645,31 +653,25 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre26.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre26.setText("FECHA NACIMIENTO:");
 
-        txt_fecha_nacimiento1.setEnabled(false);
-
         lbl_nombre27.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre27.setText("OCUPACION / PROFESION:");
 
-        txt_nombre4.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre4.setEnabled(false);
+        txt_ocupacion_profesion_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre28.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre28.setText("TELEFONO:");
 
-        txt_nombre5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre5.setEnabled(false);
+        txt_telefono_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre29.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre29.setText("DOMICILIO:");
 
-        txt_nombre6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre6.setEnabled(false);
+        txt_domicilio_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre30.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre30.setText("INGRESO:");
 
-        txt_nombre7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre7.setEnabled(false);
+        txt_ingreso_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel9.setText("MADRE:");
@@ -677,15 +679,16 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre31.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre31.setText("RUT:");
 
-        txt_rut6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_rut_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_rut_madre.setText("19196238");
 
-        txt_dv2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_dv_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_dv_madre.setText("9");
 
         lbl_nombre32.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_nombre32.setText("-");
 
-        txt_nombre8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre8.setEnabled(false);
+        txt_nombre_completo_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre33.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre33.setText("NIVEL EDUCACIONAL:");
@@ -693,28 +696,22 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre34.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre34.setText("INGRESO:");
 
-        txt_nombre9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre9.setEnabled(false);
+        txt_ingreso_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
-        txt_nombre10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre10.setEnabled(false);
+        txt_domicilio_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre35.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre35.setText("DOMICILIO:");
 
-        txt_nombre11.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre11.setEnabled(false);
+        txt_telefono_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre36.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre36.setText("TELEFONO:");
 
-        txt_nombre12.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_nombre12.setEnabled(false);
+        txt_ocupacion_profesion_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre37.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre37.setText("OCUPACION / PROFESION:");
-
-        txt_fecha_nacimiento2.setEnabled(false);
 
         lbl_nombre38.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre38.setText("FECHA NACIMIENTO:");
@@ -728,37 +725,44 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre40.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre40.setText("INTEGRANTES:");
 
-        txt_rut7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_integrantes_familia.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_integrantes_familia.setText("0");
 
         lbl_nombre41.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre41.setText("ABUELOS:");
 
-        txt_rut8.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_abuelos.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_abuelos.setText("0");
 
         lbl_nombre42.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre42.setText("TIOS:");
 
-        txt_rut9.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_tios.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_tios.setText("0");
 
         lbl_nombre43.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre43.setText("N* HERMANOS:");
 
-        txt_rut10.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_numero_hermanos.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_numero_hermanos.setText("0");
 
-        jCheckBox7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jCheckBox7.setText("HERMANOS ESTUDIANDO");
+        check_hermanos_estudiando.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        check_hermanos_estudiando.setText("HERMANOS ESTUDIANDO");
 
         lbl_nombre44.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre44.setText("EDUCACION MEDIA:");
 
-        txt_rut11.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_educacion_media.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_educacion_media.setText("0");
 
-        txt_rut12.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_educacion_basica.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_educacion_basica.setText("0");
 
         lbl_nombre45.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre45.setText("EDUCACION BASICA:");
 
-        txt_rut13.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_educacion_universitaria.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_educacion_universitaria.setText("0");
 
         lbl_nombre46.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre46.setText("EDUCACION UNIVESITARIA:");
@@ -781,12 +785,12 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre49.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre49.setText("RUT JEFE HOGAR:");
 
-        txt_rut15.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_rut_jefe_hogar.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre53.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_nombre53.setText("-");
 
-        txt_dv3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_dv_jefe_hogar.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -810,15 +814,15 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lbl_nombre23)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_rut4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_rut_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre24)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_dv1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_dv_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre22)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre3, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_nombre_completo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre25)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -826,36 +830,36 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre30)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre7))
+                        .addComponent(txt_ingreso_padre))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lbl_nombre26)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_fecha_nacimiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(date_fecha_nacimiento_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(3, 3, 3)
                         .addComponent(lbl_nombre27)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre4, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_ocupacion_profesion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre28)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre5, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_telefono_padre, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre29)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre6))
+                        .addComponent(txt_domicilio_padre))
                     .addComponent(jSeparator4)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lbl_nombre31)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_rut6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_rut_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre32)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_dv2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_dv_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre39)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre8, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_nombre_completo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre33)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -863,23 +867,23 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre34)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre9))
+                        .addComponent(txt_ingreso_madre))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lbl_nombre38)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_fecha_nacimiento2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(date_fecha_nacimiento_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(3, 3, 3)
                         .addComponent(lbl_nombre37)
                         .addGap(2, 2, 2)
-                        .addComponent(txt_nombre12, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_ocupacion_profesion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(3, 3, 3)
                         .addComponent(lbl_nombre36)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre11, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_telefono_madre, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre35)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_nombre10))
+                        .addComponent(txt_domicilio_madre))
                     .addComponent(jSeparator3)
                     .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator5)
@@ -889,37 +893,37 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(lbl_nombre40)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_rut7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txt_integrantes_familia, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(lbl_nombre41)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_rut8)))
+                                .addComponent(txt_abuelos)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(lbl_nombre42)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_rut9))
+                                .addComponent(txt_tios))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(lbl_nombre43)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_rut10, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txt_numero_hermanos, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jCheckBox7)
+                                .addComponent(check_hermanos_estudiando)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lbl_nombre45)
                                 .addGap(3, 3, 3)
-                                .addComponent(txt_rut12))
+                                .addComponent(txt_educacion_basica))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(lbl_nombre44)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_rut11, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_educacion_media, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lbl_nombre46)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_rut13, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txt_educacion_universitaria, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jSeparator6)
                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -943,11 +947,11 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lbl_nombre49)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_rut15, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_rut_jefe_hogar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_nombre53)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_dv3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txt_dv_jefe_hogar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbl_nombre51)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -971,31 +975,34 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbl_nombre22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lbl_nombre23, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_rut4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_nombre24, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_dv1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txt_nombre3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_nombre25, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(cbo_nivel_educacional_padre_familiar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_nombre30, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nombre7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_fecha_nacimiento1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lbl_nombre22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_nombre23, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_rut_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl_nombre24, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_dv_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(2, 2, 2))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_nombre25, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbo_nivel_educacional_padre_familiar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_nombre30, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_ingreso_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(txt_nombre_completo_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(date_fecha_nacimiento_padre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre27, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lbl_nombre26, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nombre4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_ocupacion_profesion_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_nombre28, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nombre5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_telefono_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_nombre29, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nombre6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txt_domicilio_padre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1005,29 +1012,29 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl_nombre31, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_rut6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_rut_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbl_nombre32, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_dv2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_dv_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(2, 2, 2))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txt_nombre8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_nombre_completo_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_nombre33, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(cbo_nivel_educacional_madre_familiar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_nombre34, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nombre9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_ingreso_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_nombre39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txt_fecha_nacimiento2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(date_fecha_nacimiento_madre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_nombre38, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lbl_nombre37, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nombre12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_ocupacion_profesion_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_nombre36, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nombre11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txt_telefono_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lbl_nombre35, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txt_nombre10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txt_domicilio_madre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1035,22 +1042,22 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nombre40, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_integrantes_familia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre43, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_numero_hermanos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre45, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox7))
+                    .addComponent(txt_educacion_basica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(check_hermanos_estudiando))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nombre41, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_abuelos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre42, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_tios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre44, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_educacion_media, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre46, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_educacion_universitaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1062,9 +1069,9 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                     .addComponent(lbl_nombre51, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbo_religion_familiar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre49, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_rut_jefe_hogar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre53, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_dv3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_dv_jefe_hogar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nombre48, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1401,7 +1408,63 @@ public class interfaz_ingreso extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_siguiente_alumnoActionPerformed
 
     private void btn_siguiente_familiaresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_siguiente_familiaresActionPerformed
-        panel_principal.setSelectedIndex(2);
+        try{
+            Validaciones validacion = new Validaciones();
+             // Recepcion de Datos de Padre y Madre
+            int rut_padre=Integer.parseInt(txt_rut_padre.getText());
+            String dv_padre=txt_dv_padre.getText();
+            String nombre_padre = txt_nombre_completo_padre.getText();
+            int nivel_educacional_padre = cbo_nivel_educacional_padre_familiar.getSelectedIndex();
+            String ingreso_padre = txt_ingreso_padre.getText();
+            Date fecha_nacimiento_padre = date_fecha_nacimiento_padre.getDate();
+            String ocupacion_padre = txt_ocupacion_profesion_padre.getText();
+            String telefono_padre = txt_telefono_padre.getText();
+            String domicilio_padre = txt_domicilio_padre.getText();
+            // Datos Madre
+            int rut_madre=Integer.parseInt(txt_rut_madre.getText());
+            String dv_madre=txt_dv_madre.getText();
+            String nombre_madre = txt_nombre_completo_madre.getText();
+            int nivel_educacional_madre = cbo_nivel_educacional_madre_familiar.getSelectedIndex();
+            String ingreso_madre = txt_ingreso_madre.getText();
+            Date fecha_nacimiento_madre = date_fecha_nacimiento_madre.getDate();
+            String ocupacion_madre = txt_ocupacion_profesion_madre.getText();
+            String telefono_madre = txt_telefono_madre.getText();
+            String domicilio_madre = txt_domicilio_madre.getText();
+            //Recepcion de Datos Familia Principalmente Cantidades
+            int integrantes = Integer.parseInt(txt_integrantes_familia.getText());
+            int abuelos = Integer.parseInt(txt_abuelos.getText());
+            int n_hermanos = Integer.parseInt(txt_numero_hermanos.getText());
+            int tios = Integer.parseInt(txt_tios.getText());
+            String hermanos_estudiando = "N";
+            if (check_hermanos_estudiando.isSelected()) {
+                hermanos_estudiando = "S";
+            }
+            int educacion_basica = Integer.parseInt(txt_educacion_basica.getText());
+            int educacion_media = Integer.parseInt(txt_educacion_media.getText());
+            int educacion_universitaria = Integer.parseInt(txt_educacion_universitaria.getText());
+            //Recepcion Datos Jefe de Hogar
+            int relacion_jefe_hogar = cbo_jefe_hogar.getSelectedIndex();
+            int prevision = cbo_prevision.getSelectedIndex();
+            int salud = cbo_salud_familiar.getSelectedIndex();
+            int religion = cbo_religion_familiar.getSelectedIndex();
+            int rut_jefe_hogar = Integer.parseInt(txt_rut_jefe_hogar.getText());
+            String dv_rut_jefe_hogar = txt_rut_jefe_hogar.getText();
+            String[] arreglo = validacion.validarFamiliar(dv_padre,nombre_padre,ingreso_padre,ocupacion_padre,telefono_padre,
+                    domicilio_padre,dv_madre,nombre_madre,ingreso_madre,ocupacion_madre,telefono_madre,domicilio_madre,hermanos_estudiando,dv_rut_jefe_hogar,
+                    rut_padre,nivel_educacional_padre,rut_madre,nivel_educacional_madre,integrantes,abuelos,n_hermanos,tios,educacion_basica,educacion_media,educacion_universitaria,
+                    relacion_jefe_hogar,prevision,salud,religion,rut_jefe_hogar);
+            if(arreglo[0].equals("S")){
+                panel_principal.setSelectedIndex(2);
+            }else{
+                JOptionPane.showMessageDialog(null,arreglo[1]);
+            }
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null,e);
+        }
+        
+        
+        
+        
     }//GEN-LAST:event_btn_siguiente_familiaresActionPerformed
 
     private void txt_apellido_mat_alumnoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_apellido_mat_alumnoFocusLost
@@ -1420,6 +1483,10 @@ public class interfaz_ingreso extends javax.swing.JFrame {
     private void btn_volver_familiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_volver_familiarActionPerformed
         panel_principal.setSelectedIndex(0);
     }//GEN-LAST:event_btn_volver_familiarActionPerformed
+
+    private void txt_dv_padreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dv_padreFocusLost
+        
+    }//GEN-LAST:event_txt_dv_padreFocusLost
     private void llenarCbo() {
         Usuario user = new Usuario();
         user.obtener_comunas();
@@ -1505,13 +1572,15 @@ public class interfaz_ingreso extends javax.swing.JFrame {
     public static javax.swing.JComboBox<String> cbo_vinculo_alumno;
     private javax.swing.JCheckBox check_certificado_estudio;
     private javax.swing.JCheckBox check_certificado_nacimiento;
+    private javax.swing.JCheckBox check_hermanos_estudiando;
     private javax.swing.JCheckBox check_pae;
     private javax.swing.JCheckBox check_pertenece_programa_puente;
     private javax.swing.JCheckBox check_programa_puente;
     private javax.swing.JCheckBox check_repite_curso;
     private com.toedter.calendar.JDateChooser date_fecha_matricula;
     private com.toedter.calendar.JDateChooser date_fecha_nacimiento;
-    private javax.swing.JCheckBox jCheckBox7;
+    private com.toedter.calendar.JDateChooser date_fecha_nacimiento_madre;
+    private com.toedter.calendar.JDateChooser date_fecha_nacimiento_padre;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1602,50 +1671,48 @@ public class interfaz_ingreso extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_nombre8;
     private javax.swing.JLabel lbl_nombre9;
     private javax.swing.JTabbedPane panel_principal;
+    private javax.swing.JTextField txt_abuelos;
     private javax.swing.JTextField txt_apellido_mat_alumno;
     private javax.swing.JTextField txt_apellido_mat_apoderado;
     private javax.swing.JTextField txt_apellido_pat_alumno;
     private javax.swing.JTextField txt_apellido_pat_apoderado;
     private javax.swing.JTextField txt_cual;
     private javax.swing.JTextField txt_direccion;
+    private javax.swing.JTextField txt_domicilio_madre;
+    private javax.swing.JTextField txt_domicilio_padre;
     private javax.swing.JTextField txt_donde_vive;
     private javax.swing.JTextField txt_dv;
-    private javax.swing.JTextField txt_dv1;
-    private javax.swing.JTextField txt_dv2;
-    private javax.swing.JTextField txt_dv3;
-    private com.toedter.calendar.JDateChooser txt_fecha_nacimiento1;
-    private com.toedter.calendar.JDateChooser txt_fecha_nacimiento2;
+    private javax.swing.JTextField txt_dv_jefe_hogar;
+    private javax.swing.JTextField txt_dv_madre;
+    private javax.swing.JTextField txt_dv_padre;
+    private javax.swing.JTextField txt_educacion_basica;
+    private javax.swing.JTextField txt_educacion_media;
+    private javax.swing.JTextField txt_educacion_universitaria;
+    private javax.swing.JTextField txt_ingreso_madre;
+    private javax.swing.JTextField txt_ingreso_padre;
+    private javax.swing.JTextField txt_integrantes_familia;
     public static javax.swing.JTextArea txt_mensaje_error;
-    private javax.swing.JTextField txt_nombre10;
-    private javax.swing.JTextField txt_nombre11;
-    private javax.swing.JTextField txt_nombre12;
-    private javax.swing.JTextField txt_nombre3;
-    private javax.swing.JTextField txt_nombre4;
-    private javax.swing.JTextField txt_nombre5;
-    private javax.swing.JTextField txt_nombre6;
-    private javax.swing.JTextField txt_nombre7;
-    private javax.swing.JTextField txt_nombre8;
-    private javax.swing.JTextField txt_nombre9;
     private javax.swing.JTextField txt_nombre_completo_alumno_dos;
     private javax.swing.JTextField txt_nombre_completo_alumno_uno;
+    private javax.swing.JTextField txt_nombre_completo_madre;
+    private javax.swing.JTextField txt_nombre_completo_padre;
     private javax.swing.JTextField txt_nombres_alumno;
     private javax.swing.JTextField txt_nombres_apoderado;
+    private javax.swing.JTextField txt_numero_hermanos;
+    private javax.swing.JTextField txt_ocupacion_profesion_madre;
+    private javax.swing.JTextField txt_ocupacion_profesion_padre;
     private javax.swing.JTextField txt_otros;
     private javax.swing.JTextField txt_poblacion;
     private javax.swing.JTextField txt_rut;
-    private javax.swing.JTextField txt_rut10;
-    private javax.swing.JTextField txt_rut11;
-    private javax.swing.JTextField txt_rut12;
-    private javax.swing.JTextField txt_rut13;
-    private javax.swing.JTextField txt_rut15;
-    private javax.swing.JTextField txt_rut4;
-    private javax.swing.JTextField txt_rut6;
-    private javax.swing.JTextField txt_rut7;
-    private javax.swing.JTextField txt_rut8;
-    private javax.swing.JTextField txt_rut9;
     private javax.swing.JTextField txt_rut_apoderado;
     private javax.swing.JTextField txt_rut_dv_apoderado;
+    private javax.swing.JTextField txt_rut_jefe_hogar;
+    private javax.swing.JTextField txt_rut_madre;
+    private javax.swing.JTextField txt_rut_padre;
     private javax.swing.JTextField txt_telefono;
     private javax.swing.JTextField txt_telefono_apoderado;
+    private javax.swing.JTextField txt_telefono_madre;
+    private javax.swing.JTextField txt_telefono_padre;
+    private javax.swing.JTextField txt_tios;
     // End of variables declaration//GEN-END:variables
 }

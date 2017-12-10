@@ -76,8 +76,40 @@ public class Validaciones {
         return arreglo;
     }
 
-    public String[] validarFamiliar() {
-
+    public String[] validarFamiliar(String dv_padre,String nombre_padre,String ingreso_padre,String ocupacion_padre,String telefono_padre,String domicilio_padre,String dv_madre,
+            String nombre_madre,String ingreso_madre,String ocupacion_madre,String telefono_madre,String domicilio_madre,String hermanos_estudiando,String dv_rut_jefe_hogar,
+            int rut_padre,int nivel_educacional_padre,int rut_madre,int nivel_educacional_madre,int integrantes,int abuelos,int n_hermanos,int tios,int educacion_basica,int educacion_media,
+            int educacion_universitaria,int relacion_jefe_hogar,int prevision,int salud,int religion,int rut_jefe_hogar) {
+        try {
+            String[] agrupado_string = {dv_padre,nombre_padre,ingreso_padre,ocupacion_padre,telefono_padre,domicilio_padre,dv_madre,nombre_madre,ingreso_madre,
+                    ocupacion_madre,telefono_madre,domicilio_madre,hermanos_estudiando,dv_rut_jefe_hogar};
+            for (String campo : agrupado_string) {
+                if (validar_vacio(campo) && campo != null && validar_maximo_caracteres(campo)) {
+                    flag = true;
+                } else {
+                    arreglo[0] = "N";
+                    arreglo[1] = "El " + campo + " no paso la validacion";
+                    break;
+                }
+            }
+            int[] agrupado_int = {rut_padre,nivel_educacional_padre,rut_madre,nivel_educacional_madre,integrantes,abuelos,n_hermanos,tios,educacion_basica,educacion_media,educacion_universitaria,
+                    relacion_jefe_hogar,prevision,salud,religion,rut_jefe_hogar};
+            for (int campo : agrupado_int) {
+                if (validar_cero(campo)) {
+                    flag = true;
+                } else {
+                    arreglo[0] = "N";
+                    arreglo[1] = "El " + campo + " no paso la validacion";
+                }
+            }
+            if (flag) {
+                arreglo[0] = "S";
+                arreglo[1] = "Validacion Correcta";
+            }
+        } catch (HeadlessException e) {
+            arreglo[0] = "N";
+            arreglo[1] = "Excepcion no controlada: " + e;
+        }
         return arreglo;
     }
 
