@@ -92,8 +92,7 @@ public class Validaciones {
                     break;
                 }
             }
-            int[] agrupado_int = {rut_padre,nivel_educacional_padre,rut_madre,nivel_educacional_madre,integrantes,abuelos,n_hermanos,tios,educacion_basica,educacion_media,educacion_universitaria,
-                    relacion_jefe_hogar,prevision,salud,religion,rut_jefe_hogar};
+            int[] agrupado_int = {rut_padre,nivel_educacional_padre,rut_madre,nivel_educacional_madre,relacion_jefe_hogar,prevision,salud,religion,rut_jefe_hogar};
             for (int campo : agrupado_int) {
                 if (validar_cero(campo)) {
                     flag = true;
@@ -113,8 +112,37 @@ public class Validaciones {
         return arreglo;
     }
 
-    public String[] validarApoderado() {
-
+    public String[] validarApoderado(String dv_apoderado,String nombres_apoderado,String apellido_mat_apoderado,String apellido_pat_apoderado,String telefono_apoderado,
+            int rut_apoderado,int vinculo_alumno_apoderado,int tipo_apoderado) {
+try {
+            String[] agrupado_string = {dv_apoderado,nombres_apoderado,apellido_mat_apoderado,apellido_pat_apoderado,telefono_apoderado};
+            for (String campo : agrupado_string) {
+                if (validar_vacio(campo) && campo != null && validar_maximo_caracteres(campo)) {
+                    flag = true;
+                } else {
+                    arreglo[0] = "N";
+                    arreglo[1] = "El " + campo + " no paso la validacion";
+                    break;
+                }
+            }
+            int[] agrupado_int = {rut_apoderado,vinculo_alumno_apoderado,tipo_apoderado};
+            
+            for (int campo : agrupado_int) {
+                if (validar_cero(campo)) {
+                    flag = true;
+                } else {
+                    arreglo[0] = "N";
+                    arreglo[1] = "El " + campo + " no paso la validacion";
+                }
+            }
+            if (flag) {
+                arreglo[0] = "S";
+                arreglo[1] = "Validacion Correcta";
+            }
+        } catch (HeadlessException e) {
+            arreglo[0] = "N";
+            arreglo[1] = "Excepcion no controlada: " + e;
+        }
         return arreglo;
     }
 

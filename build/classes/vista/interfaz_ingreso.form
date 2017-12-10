@@ -429,7 +429,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="ESPINOZA"/>
               </Properties>
               <Events>
                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_apellido_mat_alumnoFocusLost"/>
@@ -1257,7 +1256,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="19196238"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre24">
@@ -1273,11 +1271,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="9"/>
               </Properties>
-              <Events>
-                <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_dv_padreFocusLost"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre25">
               <Properties>
@@ -1389,7 +1383,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="19196238"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_dv_madre">
@@ -1397,7 +1390,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="9"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbl_nombre32">
@@ -1840,6 +1832,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="GUARDAR "/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_siguiente_familiares1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_volver_apoderado">
               <Properties>
@@ -1898,7 +1893,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="lbl_nombre60" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="cbo_vinculo_alumno" pref="230" max="32767" attributes="0"/>
+                                  <Component id="cbo_vinculo_alumno_apoderado" pref="230" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="lbl_nombre58" min="-2" max="-2" attributes="0"/>
@@ -1922,7 +1917,7 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="lbl_nombre55" min="-2" pref="14" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="txt_rut_dv_apoderado" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="txt_dv_apoderado" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="lbl_nombre61" min="-2" max="-2" attributes="0"/>
@@ -1941,7 +1936,7 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_nombre54" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                               <Component id="txt_rut_apoderado" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_rut_dv_apoderado" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_dv_apoderado" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_nombre55" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -1970,7 +1965,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_nombre60" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="cbo_vinculo_alumno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cbo_vinculo_alumno_apoderado" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -1983,7 +1978,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="txt_rut_dv_apoderado">
+                <Component class="javax.swing.JTextField" name="txt_dv_apoderado">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Arial" size="16" style="0"/>
@@ -2072,7 +2067,7 @@
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="cbo_vinculo_alumno">
+                <Component class="javax.swing.JComboBox" name="cbo_vinculo_alumno_apoderado">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="0"/>

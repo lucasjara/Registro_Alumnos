@@ -181,7 +181,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         txt_nombre_completo_alumno_dos = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
         jPanel4 = new javax.swing.JPanel();
-        txt_rut_dv_apoderado = new javax.swing.JTextField();
+        txt_dv_apoderado = new javax.swing.JTextField();
         lbl_nombre55 = new javax.swing.JLabel();
         txt_rut_apoderado = new javax.swing.JTextField();
         lbl_nombre54 = new javax.swing.JLabel();
@@ -192,7 +192,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre60 = new javax.swing.JLabel();
         lbl_nombre61 = new javax.swing.JLabel();
         cbo_tipo_apoderado = new javax.swing.JComboBox<>();
-        cbo_vinculo_alumno = new javax.swing.JComboBox<>();
+        cbo_vinculo_alumno_apoderado = new javax.swing.JComboBox<>();
         txt_telefono_apoderado = new javax.swing.JTextField();
         txt_nombres_apoderado = new javax.swing.JTextField();
         txt_apellido_mat_apoderado = new javax.swing.JTextField();
@@ -237,7 +237,6 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         txt_apellido_pat_alumno.setText("JARA");
 
         txt_apellido_mat_alumno.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_apellido_mat_alumno.setText("ESPINOZA");
         txt_apellido_mat_alumno.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txt_apellido_mat_alumnoFocusLost(evt);
@@ -634,18 +633,11 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre23.setText("RUT:");
 
         txt_rut_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_rut_padre.setText("19196238");
 
         lbl_nombre24.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_nombre24.setText("-");
 
         txt_dv_padre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_dv_padre.setText("9");
-        txt_dv_padre.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                txt_dv_padreFocusLost(evt);
-            }
-        });
 
         lbl_nombre25.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lbl_nombre25.setText("NIVEL EDUCACIONAL:");
@@ -680,10 +672,8 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         lbl_nombre31.setText("RUT:");
 
         txt_rut_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_rut_madre.setText("19196238");
 
         txt_dv_madre.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-        txt_dv_madre.setText("9");
 
         lbl_nombre32.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_nombre32.setText("-");
@@ -1088,6 +1078,11 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         panel_principal.addTab("ANTECEDENTES FAMILIARES", jPanel2);
 
         btn_siguiente_familiares1.setText("GUARDAR ");
+        btn_siguiente_familiares1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_siguiente_familiares1ActionPerformed(evt);
+            }
+        });
 
         btn_volver_apoderado.setText("VOLVER");
         btn_volver_apoderado.addActionListener(new java.awt.event.ActionListener() {
@@ -1107,7 +1102,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        txt_rut_dv_apoderado.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
+        txt_dv_apoderado.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         lbl_nombre55.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_nombre55.setText("-");
@@ -1157,7 +1152,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(lbl_nombre60)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cbo_vinculo_alumno, 0, 230, Short.MAX_VALUE))
+                        .addComponent(cbo_vinculo_alumno_apoderado, 0, 230, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(lbl_nombre58)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1177,7 +1172,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lbl_nombre55, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_rut_dv_apoderado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_dv_apoderado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(lbl_nombre61)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1191,7 +1186,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nombre54, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_rut_apoderado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_rut_dv_apoderado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_dv_apoderado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_nombre55, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1214,7 +1209,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nombre60, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbo_vinculo_alumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbo_vinculo_alumno_apoderado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_nombre61, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1376,6 +1371,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
             String certificado_estudio = "N";
             String necesita_pae = "N";
             String pertenece_programa_puente = "N";
+            
             if (check_certificado_nacimiento.isSelected()) {
                 certificado_nacimiento = "S";
             }
@@ -1484,9 +1480,29 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         panel_principal.setSelectedIndex(0);
     }//GEN-LAST:event_btn_volver_familiarActionPerformed
 
-    private void txt_dv_padreFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dv_padreFocusLost
-        
-    }//GEN-LAST:event_txt_dv_padreFocusLost
+    private void btn_siguiente_familiares1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_siguiente_familiares1ActionPerformed
+        try{
+            Validaciones validacion = new Validaciones();
+             // Recepcion de Datos de Apoderado
+            int rut_apoderado =Integer.parseInt(txt_rut_apoderado.getText());
+            String dv_apoderado=txt_dv_apoderado.getText();
+            String nombres_apoderado = txt_nombres_apoderado.getText();
+            String apellido_mat_apoderado = txt_apellido_mat_apoderado.getText();
+            String apellido_pat_apoderado = txt_apellido_pat_apoderado.getText();
+            String telefono_apoderado = txt_telefono_apoderado.getText();
+            int vinculo_alumno_apoderado = cbo_vinculo_alumno_apoderado.getSelectedIndex();
+            int tipo_apoderado = cbo_tipo_apoderado.getSelectedIndex();
+            String[] arreglo = validacion.validarApoderado(dv_apoderado,nombres_apoderado,apellido_mat_apoderado,apellido_pat_apoderado,telefono_apoderado,
+                    rut_apoderado,vinculo_alumno_apoderado,tipo_apoderado);
+            if(arreglo[0].equals("S")){
+                JOptionPane.showMessageDialog(null, "COMPLETAMOS LA VALIDACION DE TODOS LOS CAMPOS");
+            }else{
+                JOptionPane.showMessageDialog(null,arreglo[1]);
+            }
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null,e);
+        }
+    }//GEN-LAST:event_btn_siguiente_familiares1ActionPerformed
     private void llenarCbo() {
         Usuario user = new Usuario();
         user.obtener_comunas();
@@ -1569,7 +1585,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
     public static javax.swing.JComboBox<String> cbo_salud_familiar;
     public static javax.swing.JComboBox<String> cbo_tipo_apoderado;
     public static javax.swing.JComboBox<String> cbo_tipo_establecimiento;
-    public static javax.swing.JComboBox<String> cbo_vinculo_alumno;
+    public static javax.swing.JComboBox<String> cbo_vinculo_alumno_apoderado;
     private javax.swing.JCheckBox check_certificado_estudio;
     private javax.swing.JCheckBox check_certificado_nacimiento;
     private javax.swing.JCheckBox check_hermanos_estudiando;
@@ -1682,6 +1698,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
     private javax.swing.JTextField txt_domicilio_padre;
     private javax.swing.JTextField txt_donde_vive;
     private javax.swing.JTextField txt_dv;
+    private javax.swing.JTextField txt_dv_apoderado;
     private javax.swing.JTextField txt_dv_jefe_hogar;
     private javax.swing.JTextField txt_dv_madre;
     private javax.swing.JTextField txt_dv_padre;
@@ -1705,7 +1722,6 @@ public class interfaz_ingreso extends javax.swing.JFrame {
     private javax.swing.JTextField txt_poblacion;
     private javax.swing.JTextField txt_rut;
     private javax.swing.JTextField txt_rut_apoderado;
-    private javax.swing.JTextField txt_rut_dv_apoderado;
     private javax.swing.JTextField txt_rut_jefe_hogar;
     private javax.swing.JTextField txt_rut_madre;
     private javax.swing.JTextField txt_rut_padre;

@@ -78,12 +78,12 @@ public class Familiar {
             CadSql = "SELECT id,descripcion FROM tb_vinculo_alumno";
             Statement st = this.cn.createStatement();
             ResultSet rs = st.executeQuery(CadSql);
-            interfaz_ingreso.cbo_vinculo_alumno.insertItemAt("Seleccione",0);
-            interfaz_ingreso.cbo_vinculo_alumno.setSelectedIndex(0);
+            interfaz_ingreso.cbo_vinculo_alumno_apoderado.insertItemAt("Seleccione",0);
+            interfaz_ingreso.cbo_vinculo_alumno_apoderado.setSelectedIndex(0);
             interfaz_ingreso.cbo_jefe_hogar.insertItemAt("Seleccione",0);
             interfaz_ingreso.cbo_jefe_hogar.setSelectedIndex(0);
             while (rs.next()) {
-                interfaz_ingreso.cbo_vinculo_alumno.insertItemAt(rs.getString(2), Integer.parseInt(rs.getString(1)));
+                interfaz_ingreso.cbo_vinculo_alumno_apoderado.insertItemAt(rs.getString(2), Integer.parseInt(rs.getString(1)));
                 interfaz_ingreso.cbo_jefe_hogar.insertItemAt(rs.getString(2), Integer.parseInt(rs.getString(1)));
             }
         } catch (SQLException e) {
