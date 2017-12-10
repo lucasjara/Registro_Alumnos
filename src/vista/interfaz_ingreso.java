@@ -1349,6 +1349,7 @@ public class interfaz_ingreso extends javax.swing.JFrame {
             String direccion = txt_direccion.getText();
             String telefono = txt_telefono.getText();
             int curso = cbo_curso.getSelectedIndex();
+            System.out.println(curso);
             Date fecha_matricula = date_fecha_matricula.getDate();
             String poblacion = txt_poblacion.getText();
             int comuna = cbo_comuna.getSelectedIndex();
@@ -1457,10 +1458,6 @@ public class interfaz_ingreso extends javax.swing.JFrame {
         }catch(NumberFormatException e){
             JOptionPane.showMessageDialog(null,e);
         }
-        
-        
-        
-        
     }//GEN-LAST:event_btn_siguiente_familiaresActionPerformed
 
     private void txt_apellido_mat_alumnoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_apellido_mat_alumnoFocusLost
@@ -1496,6 +1493,16 @@ public class interfaz_ingreso extends javax.swing.JFrame {
                     rut_apoderado,vinculo_alumno_apoderado,tipo_apoderado);
             if(arreglo[0].equals("S")){
                 JOptionPane.showMessageDialog(null, "COMPLETAMOS LA VALIDACION DE TODOS LOS CAMPOS");
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             }else{
                 JOptionPane.showMessageDialog(null,arreglo[1]);
             }
